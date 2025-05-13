@@ -3,8 +3,8 @@
 
 class Picker
     {
-        static Random rng = new Random();
-        static List<string> questions = [
+        static Random _rng = new Random();
+        static List<string> _questions = [
             "Did you meet anyone new today?",
             "What has been the most exciting part of today?",
             "What are you most proud of for today?",
@@ -25,9 +25,9 @@ class Picker
             "Did anything today push you outside your comfort zone?"
         ];
 
-        public static string getRandom()
+        public static string GetRandom()
         {
-            int index = rng.Next(questions.Count);
-            return questions[index];
+            int index = _rng.Next(_questions.Count);
+            return _questions[index];
         }
     }

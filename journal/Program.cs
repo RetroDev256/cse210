@@ -19,38 +19,42 @@ class Program
             switch (selection)
             {
                 case "1":
-                    Console.WriteLine("What is the date for the entry?");
+                    Console.WriteLine("\nWhat is the date for the entry?");
                     string date = Console.ReadLine()!;
-                    string question = Picker.getRandom();
+                    string question = Picker.GetRandom();
                     Console.WriteLine(question);
                     string answer = Console.ReadLine()!;
                     Entry entry = new Entry(date, question, answer);
-                    journal.addEntry(entry);
-                    Console.WriteLine("Entry saved.");
+                    journal.AddEntry(entry);
+                    Console.WriteLine("Entry saved.\n");
                     break;
 
                 case "2":
-                    Console.WriteLine("Here are the current journal entries:");
-                    string entries = journal.getEntries();
+                    Console.WriteLine("\nHere are the current journal entries:");
+                    string entries = journal.GetEntries();
                     Console.WriteLine(entries);
                     break;
 
                 case "3":
-                    Console.Write("Enter the path to load from: ");
+                    Console.Write("\nEnter the path to load from: ");
                     string load_path = Console.ReadLine()!;
-                    journal.loadEntries(load_path);
-                    Console.WriteLine("Journal Loaded.");
+                    journal.LoadEntries(load_path);
+                    Console.WriteLine("Journal Loaded.\n");
                     break;
 
                 case "4":
-                    Console.Write("Enter the path to save to: ");
+                    Console.Write("\nEnter the path to save to: ");
                     string save_path = Console.ReadLine()!;
-                    journal.saveEntries(save_path);
-                    Console.WriteLine("Journal Saved.");
+                    journal.SaveEntries(save_path);
+                    Console.WriteLine("Journal Saved.\n");
                     break;
 
                 case "5":
                     running = false;
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid input. Please try again.\n");
                     break;
             }
         }

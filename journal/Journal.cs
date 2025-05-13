@@ -5,36 +5,40 @@ using System.Text.Json;
 
 class Journal
 {
-    List<Entry> entries = new List<Entry>();
+    List<Entry> _entries = new List<Entry>();
 
-    public void addEntry(Entry entry)
+    public void AddEntry(Entry entry)
     {
-        this.entries.Add(entry);
+        _entries.Add(entry);
     }
 
-    public string getEntries()
+    public string GetEntries()
     {
         string result = "";
-        foreach (Entry entry in this.entries)
+        for (int i = 0; i < _entries.Count; i += 1)
         {
-            result += entry.format() + '\n';
+            result += _entries[i].Format();
+            if (i + 1 < _entries.Count)
+            {
+                result += '\n';
+            }
         }
         return result;
     }
 
     // STRETCH CHALLENGE: Saving file as JSON so
     // other programs can interact with our journal
-    public void loadEntries(string path)
+    public void LoadEntries(string path)
     {
         string json = File.ReadAllText(path);
-        this.entries = JsonSerializer.Deserialize<List<Entry>>(json)!;
+        _entries = JsonSerializer.Deserialize<List<Entry>>(json)!;
     }
 
     // STRETCH CHALLENGE: Loading file as JSON so
     // other programs can interact with our journal
-    public void saveEntries(string path)
+    public void SaveEntries(string path)
     {
-        string json = JsonSerializer.Serialize<List<Entry>>(this.entries);
+        string json = JsonSerializer.Serialize<List<Entry>>(_entries);
         File.WriteAllText(path, json);
     }
 }

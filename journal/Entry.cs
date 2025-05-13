@@ -4,19 +4,22 @@
 [Serializable]
 class Entry
 {
-    public string date { get; set; }
-    public string question { get; set; }
-    public string answer { get; set; }
+    // C# JSON serialization requires get and set methods for each attribute
+    public string _date { get; set; }
+    public string _question { get; set; }
+    public string _answer { get; set; }
 
-    public Entry(string date, string question, string answer)
+    // C# requires these parameters to share the same names
+    // as the attributes for JSON serialization to work
+    public Entry(string _date, string _question, string _answer)
     {
-        this.date = date;
-        this.question = question;
-        this.answer = answer;
+        this._date = _date;
+        this._question = _question;
+        this._answer = _answer;
     }
 
-    public string format()
+    public string Format()
     {
-        return $"Date: {date}\nQuestion: {question}\nAnswer:{answer}\n";
+        return $"Date: {_date}\nQuestion: {_question}\nAnswer: {_answer}\n";
     }
 }
