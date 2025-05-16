@@ -1,5 +1,8 @@
 ﻿// This "class" runs the UI
 
+// This program exceeds the requirements as it correctly
+// serializes and deserializes journal entries to JSON.
+
 class Program
 {
     public static void Main()
