@@ -1,0 +1,122 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Develop 02 (Journal)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/prove/Develop02",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Develop 03 (Scripture Memorizer)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/prove/Develop03",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Develop 04 (Mindfulness)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/prove/Develop04",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Develop 05 (Goal Tracker)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/prove/Develop05",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Final Project (Open ended)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/final/FinalProject",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Foundation 1 (YouTube)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/final/Foundation1",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Foundation 2 (Products)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/final/Foundation2",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Foundation 3 (Events)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/final/Foundation3",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Foundation 4 (Exercise)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "run"
+            ],
+            "cwd": "${workspaceFolder}/final/Foundation4",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+    ]
+}
