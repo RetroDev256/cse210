@@ -4,7 +4,7 @@ public class Scripture
     private List<Word> _content;
     private Random _rng;
 
-    // Function required by Library class
+    // Functions required by Library class
     public Scripture(Reference reference, List<Word> content)
     {
         _rng = new Random();
@@ -24,7 +24,7 @@ public class Scripture
     public string RenderString()
     {
         string result = _reference.RenderString();
-        result += ": ";
+        result += "\n\n";
         foreach (Word word in _content)
         {
             result += word.RenderString();

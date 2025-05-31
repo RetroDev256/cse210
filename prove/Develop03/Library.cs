@@ -18,9 +18,11 @@ public class Library
         new Scripture(new Reference("Alma", 12, 38, 40),
             SplitWords("Now Zeezrom saith again unto him: Is the Son of God the very Eternal Father? And Amulek said unto him: Yea, he is the very Eternal Father of heaven and of earth, and all things which in them are; he is the beginning and the end, the first and the last; And he shall come into the world to redeem his people; and he shall take upon him the transgressions of those who believe on his name; and these are they that shall have eternal life, and salvation cometh to none else.")
         )
-    ]; // TODO
+    ];
     static private Random _rng = new Random();
 
+    // This can be improved at some point to construct the scriptures inside the
+    // function, so we don't get references to functions, but our own instances.
     public static Scripture GetRandom()
     {
         int idx = _rng.Next(_scriptures.Count);
