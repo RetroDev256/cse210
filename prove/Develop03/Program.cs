@@ -7,6 +7,8 @@ class Program
         {
             Console.Clear();
             Console.WriteLine($"{scripture.RenderString()}\n");
+            if (scripture.IsAllHidden()) break;
+
             Console.WriteLine("Press enter to continue, type 'quit' to finish, 'new' for new scripture:");
             scripture.HideMore();
 

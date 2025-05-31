@@ -14,6 +14,12 @@ public class Word
         _hidden = true;
     }
 
+    // Required for checking if all words are hidden:
+    public bool IsHidden()
+    {
+        return _hidden;
+    }
+
     // Renders underscores if the word is hidden
     public string RenderString()
     {

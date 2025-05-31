@@ -33,11 +33,22 @@ public class Scripture
         return result;
     }
 
+    // Check if all the words are hidden - 
+    // Function is required by the program to exit if all words are hidden
+    public bool IsAllHidden()
+    {
+        foreach (Word word in _content)
+        {
+            if (!word.IsHidden()) return false;
+        }
+        return true;
+    }
+
     public void HideMore()
-    {   
-        // Hide 8 verses each time - this may attempt to hide
+    {
+        // Hide 12 verses each time - this may attempt to hide
         // words that have already been hidden
-        for (int i = 0; i < 8; i += 1)
+        for (int i = 0; i < 12; i += 1)
         {
             int idx = _rng.Next(_content.Count);
             _content[idx].Hide();
