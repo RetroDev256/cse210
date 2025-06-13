@@ -11,15 +11,16 @@ class Program
             Console.WriteLine("    1. Start breathing activity");
             Console.WriteLine("    2. Start reflecting activity");
             Console.WriteLine("    3. Start listing activity");
-            Console.WriteLine("    4. Quit");
+            Console.WriteLine("    4. Start sleeping activity");
+            Console.WriteLine("    5. Quit");
             Console.Write("Select an option: ");
             string option = Console.ReadLine();
 
             // Quit the program
-            if (option == "4") break;
+            if (option == "5") break;
 
             // Report invalid input
-            if (option != "1" && option != "2" && option != "3")
+            if (option != "1" && option != "2" && option != "3" && option != "4")
             {
                 Console.WriteLine("Invalid Option. Try again.");
                 continue;
@@ -43,6 +44,10 @@ class Program
                 case "3":
                     Listing listing = new Listing(duration);
                     listing.RunListing();
+                    break;
+                case "4":
+                    Sleeping sleeping = new Sleeping(duration);
+                    sleeping.RunSleeping();
                     break;
                 default:
                     // We check beforehand that this won't ever be reached
