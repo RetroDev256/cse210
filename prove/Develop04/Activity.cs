@@ -28,17 +28,26 @@ class Activity
     {
         while (duration > 0)
         {
-            Console.Write($"\r{message} {duration}...");
-            Delay(1);
+            Console.Write($"\r{message} {duration} ");
+
+            // Exceeding requirements
+            string symbols = "\\|/-";
+            for (int i = 0; i < 8; i += 1)
+            {
+                Console.Write(symbols[i % 4]);
+                Delay(125);
+                Console.Write("\b");
+            }
+
             duration -= 1;
         }
         Console.WriteLine();
     }
 
-    // Block the execution of the current thread by duration seconds
-    protected static void Delay(int duration)
+    // Block the execution of the current thread by duration_ms milliseconds
+    private static void Delay(int duration_ms)
     {
         // Thread.Sleep takes milliseconds
-        Thread.Sleep(duration * 1000);
+        Thread.Sleep(duration_ms);
     }
 }

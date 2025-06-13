@@ -1,3 +1,5 @@
+// Exceeding the requirements
+
 class Sleeping : Activity
 {
     public Sleeping(int duration) : base("sleeping", "This activity will help you gain valuable rest in these trying times.", duration) { }
@@ -18,7 +20,8 @@ class Sleeping : Activity
         for (int i = 0; i < 70; i += 1)
         {
             Console.Write("WAKE UP");
-            for (int j = 0; j < i; j += 1) {
+            for (int j = 0; j < i; j += 1)
+            {
                 Console.Write("!");
             }
             Console.WriteLine();
