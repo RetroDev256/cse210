@@ -38,10 +38,11 @@ class Activity
                 Delay(125);
                 Console.Write("\b");
             }
+            Console.Write(" ");
 
             duration -= 1;
         }
-        Console.WriteLine();
+        Console.WriteLine($"\r{message}  ");
     }
 
     // Block the execution of the current thread by duration_ms milliseconds
