@@ -11,9 +11,10 @@ class Breathing : Activity
         {
             CountDown("Breathe in...", 5);
             CountDown("Breathe out...", 3);
+            Console.WriteLine();
             delay -= 8;
         }
-        
+
         EndMessage();
     }
 }

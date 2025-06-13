@@ -23,7 +23,6 @@ class Reflecting : Activity
     public void RunReflecting()
     {
         StartMessage();
-
         Random rng = new Random();
 
         int delay = _duration;
