@@ -82,6 +82,10 @@ public class GoalManager
                     int bonus = int.Parse(reader.ReadLine());
                     _goals.Add(new CheckListGoal(name, desc, points, count, c_completed, bonus));
                     break;
+
+                case "NEGATIVE":
+                    _goals.Add(new NegativeGoal(name, desc, points));
+                    break;
             }
         }
 

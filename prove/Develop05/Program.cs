@@ -62,6 +62,7 @@ class Program
             + "    1. Simple Goal\n"
             + "    2. Eternal Goal\n"
             + "    3. Checklist Goal\n"
+            + "    4. Negative Goal\n"
             + "Select an option: ";
 
         Console.Write(creation_menu);
@@ -81,10 +82,12 @@ class Program
                 SimpleGoal s_goal = new SimpleGoal(name, desc, points, false);
                 manager.AddGoal(s_goal);
                 break;
+
             case "2":
                 EternalGoal e_goal = new EternalGoal(name, desc, points);
                 manager.AddGoal(e_goal);
                 break;
+
             case "3":
                 // The checklist goal requires more information than the other goals
                 Console.Write("Enter the number of events for this goal: ");
@@ -94,6 +97,11 @@ class Program
 
                 CheckListGoal c_goal = new CheckListGoal(name, desc, points, count, 0, bonus);
                 manager.AddGoal(c_goal);
+                break;
+
+            case "4":
+                NegativeGoal n_goal = new NegativeGoal(name, desc, points);
+                manager.AddGoal(n_goal);
                 break;
         }
     }
