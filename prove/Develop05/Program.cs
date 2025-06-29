@@ -1,5 +1,9 @@
 using System;
 
+// Exceeding the requirements:
+// A new type of goal has been added ("NegativeGoal") which
+// tracks bad habits and subtracts points if an event occurs.
+
 class Program
 {
     static void Main(string[] args)
