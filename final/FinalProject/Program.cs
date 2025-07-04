@@ -3,22 +3,13 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
+        // Initialization
         Coordinate dim = new Coordinate(80, 25);
         Game game = new Game(dim);
         HighScores scores = new HighScores();
 
-        Splash();
-        int score = game.Run();
-        scores.AddScore(score);
-        scores.Save();
-
-        string scoreboard = scores.Render();
-        Console.WriteLine($"\n{scoreboard}");
-    }
-
-    static void Splash()
-    {
+        // Splash Screen
         Console.WriteLine("Welcome to Snake!");
         Console.WriteLine();
         Console.WriteLine("Instructions:");
@@ -28,5 +19,14 @@ class Program
         Console.WriteLine();
         Console.Write("Press any key to begin... ");
         _ = Console.ReadKey();
+
+        // Gameplay
+        int score = game.Run();
+        scores.AddScore(score);
+        scores.Save();
+        
+        // Scoreboard display
+        string scoreboard = scores.Render();
+        Console.WriteLine($"\n{scoreboard}");
     }
 }
