@@ -49,7 +49,7 @@ public class Grid
     }
 
     // Rasterizes the grid according to what each cell would display
-    public string Render(int width)
+    public string Format(int width)
     {
         string result = "";
         for (int i = 0; i < _cells.Count; i += 1)

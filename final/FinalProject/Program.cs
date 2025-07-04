@@ -26,7 +26,7 @@ class Program
         scores.Save();
         
         // Scoreboard display
-        string scoreboard = scores.Render();
+        string scoreboard = scores.Format();
         Console.WriteLine($"\n{scoreboard}");
     }
 }

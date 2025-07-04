@@ -55,7 +55,7 @@ public class Game
     public void Render()
     {
         int score = _snake.GetLength();
-        string map = _cells.Render(_dim.GetX());
+        string map = _cells.Format(_dim.GetX());
         string time = DateTime.Now.ToString("HH:mm:ss");
         Console.SetCursorPosition(0, 0);
         Console.WriteLine($"Snake Game - Time: {time} - Score: {score}\n{map}");

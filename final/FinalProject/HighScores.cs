@@ -53,7 +53,7 @@ public class HighScores
     // This function assumes that there is at least one score, but because
     // we always attempt to add a score to the scoreboard before we render
     // the high scores, we can safely assume that there is at least one. 
-    public string Render()
+    public string Format()
     {
         string scoreboard = "#:   Points:   Date:        Name:\n";
         for (int i = 0; i < _scores.Count; i += 1)
