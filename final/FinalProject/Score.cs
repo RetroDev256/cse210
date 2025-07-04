@@ -1,7 +1,6 @@
 // Representing the score of a player on the scoreboard
 public class Score
 {
-
     private int _value;
     private string _date;
     private string _name;
