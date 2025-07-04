@@ -52,7 +52,7 @@ public class Game
         return _snake.GetLength();
     }
 
-    public void Render()
+    private void Render()
     {
         int score = _snake.GetLength();
         string map = _cells.Format(_dim.GetX());
