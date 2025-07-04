@@ -4,6 +4,29 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello FinalProject World!");
+        Coordinate dim = new Coordinate(80, 25);
+        Game game = new Game(dim);
+        HighScores scores = new HighScores();
+
+        Splash();
+        int score = game.Run();
+        scores.AddScore(score);
+        scores.Save();
+
+        string scoreboard = scores.Render();
+        Console.WriteLine($"\n{scoreboard}");
+    }
+
+    static void Splash()
+    {
+        Console.WriteLine("Welcome to Snake!");
+        Console.WriteLine();
+        Console.WriteLine("Instructions:");
+        Console.WriteLine("- Use the arrow keys to move around.");
+        Console.WriteLine("- Consume food to earn points.");
+        Console.WriteLine("- Avoid the wall and your tail.");
+        Console.WriteLine();
+        Console.Write("Press any key to begin... ");
+        _ = Console.ReadKey();
     }
 }
