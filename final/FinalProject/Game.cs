@@ -46,6 +46,14 @@ public class Game
             _cells.SetCell(pos, _dim.GetX(), snakeHead);
 
             Render();
+
+            // This *can* be changed to be different depending on the snake's
+            // direction - to help deal with console characters not being a
+            // perfect 1:1 apsect ratio. In reality, I won't change it, because
+            // terminal character aspect ratios aren't standardized, there's no
+            // cross-platform way to get this information, and from testing it
+            // out myself, the gameplay is really weird this way, even if
+            // technically the game moves at the same rate in all 4 directions.
             Thread.Sleep(100);
         }
 
